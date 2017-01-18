@@ -710,7 +710,7 @@ XCTAssertEqual(CGPointEqualToPoint(point, p), YES); \
     [self.adapter reloadDataWithCompletion:nil];
 
     id randomSectionController = [IGListSectionController new];
-    XCTAssertNil([self.adapter indexPathForSectionController:randomSectionController index:0]);
+    XCTAssertNil([self.adapter indexPathForSectionController:randomSectionController index:0 usePreviousSection:NO]);
 }
 
 - (void)test_whenQueryingSectionForObject_thatSectionReturned {
