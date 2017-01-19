@@ -171,6 +171,4 @@ static IGListMoveIndex *newMove(NSUInteger from, NSUInteger to) {
     XCTAssertEqualObjects(result.insertSections, indexSet(@[@1]));
 }
 
-// any section that is moved w/ an item-level op in it should: discard all item ops, convert to delete+insert
-
 @end
