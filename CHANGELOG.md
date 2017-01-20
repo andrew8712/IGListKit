@@ -20,6 +20,11 @@ This release closes the [3.0.0 milestone](https://github.com/Instagram/IGListKit
                         withObject:(id)object;
 ```
 
+### Enhancements
+
+- You can now manually move items (cells) within a section controller, ex: `[self.collectionContext moveInSectionController:self fromIndex:0 toIndex:1]`. [Ryan Nystrom](https://github.com/rnystrom) [(#418)](https://github.com/Instagram/IGListKit/pull/418)
+
+
 2.2.0
 -----
 
