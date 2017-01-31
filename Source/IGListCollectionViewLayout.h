@@ -60,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
  Please see the unit tests for more configuration examples and expected output.
  */
 IGLK_SUBCLASSING_RESTRICTED
-@interface IGListVerticalCollectionViewLayout : UICollectionViewLayout
+@interface IGListCollectionViewLayout : UICollectionViewLayout
 
 /**
  Set this to adjust the offset of the sticky headers. Can be used to change the sticky header position as UI like the

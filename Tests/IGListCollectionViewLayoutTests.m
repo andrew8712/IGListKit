@@ -9,15 +9,15 @@
 
 #import <XCTest/XCTest.h>
 
-#import <IGListKit/IGListVerticalCollectionViewLayout.h>
+#import <IGListKit/IGListCollectionViewLayout.h>
 
 #import "IGLayoutTestDataSource.h"
 #import "IGLayoutTestItem.h"
 #import "IGLayoutTestSection.h"
 
-@interface IGListVerticalCollectionViewLayoutTests : XCTestCase
+@interface IGListCollectionViewLayoutTests : XCTestCase
 
-@property (nonatomic, strong) IGListVerticalCollectionViewLayout *layout;
+@property (nonatomic, strong) IGListCollectionViewLayout *layout;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) IGLayoutTestDataSource *dataSource;
 
@@ -38,7 +38,7 @@ XCTAssertEqual(CGRectGetWidth(expected), CGRectGetWidth(frame)); \
 XCTAssertEqual(CGRectGetHeight(expected), CGRectGetHeight(frame)); \
 } while(0)
 
-@implementation IGListVerticalCollectionViewLayoutTests
+@implementation IGListCollectionViewLayoutTests
 
 - (UICollectionViewCell *)cellForSection:(NSInteger)section item:(NSInteger)item {
     return [self.collectionView cellForItemAtIndexPath:quickPath(section, item)];
@@ -49,7 +49,7 @@ XCTAssertEqual(CGRectGetHeight(expected), CGRectGetHeight(frame)); \
 }
 
 - (void)setUpWithStickyHeaders:(BOOL)sticky topInset:(CGFloat)inset {
-    self.layout = [[IGListVerticalCollectionViewLayout alloc] initWithStickyHeaders:sticky topContentInset:inset];
+    self.layout = [[IGListCollectionViewLayout alloc] initWithStickyHeaders:sticky topContentInset:inset];
     self.dataSource = [IGLayoutTestDataSource new];
     self.collectionView = [[UICollectionView alloc] initWithFrame:kTestFrame collectionViewLayout:self.layout];
     self.collectionView.dataSource = self.dataSource;

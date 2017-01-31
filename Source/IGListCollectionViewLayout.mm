@@ -7,7 +7,7 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import "IGListVerticalCollectionViewLayout.h"
+#import "IGListCollectionViewLayout.h"
 
 #import <vector>
 
@@ -73,7 +73,7 @@ static void adjustZIndexForAttributes(UICollectionViewLayoutAttributes *attribut
 @implementation IGVerticalCollectionViewLayoutInvalidationContext
 @end
 
-@interface IGListVerticalCollectionViewLayout ()
+@interface IGListCollectionViewLayout ()
 
 @property (nonatomic, assign, readonly) BOOL stickyHeaders;
 @property (nonatomic, assign, readonly) CGFloat topContentInset;
@@ -81,7 +81,7 @@ static void adjustZIndexForAttributes(UICollectionViewLayoutAttributes *attribut
 
 @end
 
-@implementation IGListVerticalCollectionViewLayout {
+@implementation IGListCollectionViewLayout {
     std::vector<IGSectionEntry> _sectionData;
     NSMutableDictionary<NSIndexPath *, UICollectionViewLayoutAttributes *> *_attributesCache;
     BOOL _cachedLayoutInvalid;
